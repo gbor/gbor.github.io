@@ -165,7 +165,7 @@ var Gallery = {
         } else {
             // TODO: dataAtt might come in camel cased
             return elm.getAttribute('data-' + dataAtt); // IE approach
-        }``
+        }
     },
 
     openLightbox: function (e) {
@@ -203,7 +203,7 @@ var Gallery = {
         } else if (startIndex < 0) {
             currentIndex = 0;
         } else {
-            currentIndex = startIndex
+            currentIndex = startIndex;
         }
 
         for (i = 0; i < numOfSlides; i++) {
@@ -221,7 +221,7 @@ var Gallery = {
             if ( sizes && sizes.size.length < 8 ) {
                 chosenPhoto = this.lightBoxOrder[this.currentSlide.page - 1][currentIndex].sizes.size.length - 1;
             }
-            var chosenSize = sizes.size[chosenPhoto]
+            var chosenSize = sizes.size[chosenPhoto];
             params.src = sizes.size[chosenPhoto].source;
             params.title = this.lightBoxOrder[this.currentSlide.page - 1][currentIndex].title;
             // TODO: When the media is not photo, skip and don't add.  never Ran into that case.
@@ -277,18 +277,18 @@ var Gallery = {
                     ( params.title && '<figcaption >' + params.title + '</figcaption>' || '' ) +
                 '</figure>' +
             '</li>'
-        )
+        );
     },
 
     _getTotalImage: function () {
-        if (!this.photos || !this.photos.length === 0 ) {
+        if (!this.photos || this.photos.length === 0 ) {
             return 0;
         }
 
         return this.photos[0].photos.total;
     },
 
-    _updateImageNote: function (page, photoIndex) {
+    _updateImageNote: function () {
         var page = this.currentSlide.page;
         var photoIndex = this.currentSlide.idx;
         // TODO: catch exception
