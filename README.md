@@ -1,13 +1,18 @@
 
-This project/web page shows the gallery of images taken around Yosemite.  Location detection and taking user input is the next feature to added.
+This project/web page shows the gallery of images taken around Yosemite.  Location detection and taking user input is the next feature to be added.
 
-Final Demo can be found at http://gbor.github.io/index.html
+Final Demo can be found at http://gbor.github.io
 
 Design Inspirations:
 - Sources: Next and Prev nav buttons icon -> Facebook image
 - Yahoo Article Slideshow
 - Facebook slideshow
 
+Verified and Tested On:
+- Chrome Version 48.0.2564.103
+- Firefox Version 40.0.3
+- Safari Version 8.0
+- IE10 on Windows 8
 
 Performance features:
 - Event handlers only on the parent of the thumbnails for better performance
@@ -22,7 +27,7 @@ UX in mind features:
 - When image title is too long make sure to add Ellipsis on browser resize
 - Bigger next and previous button underlay
 - Next and Previous arrow and ESC keys control the slideshow as well
-- After viewing bunch of slides and close it, it scroll down to that thumbnail to give user grab of what just finished on
+- After viewing bunch of slides and close it, it scroll down to that thumbnail and blink it to give user indication of what was the last slide viewed
 - While viewing images in the slideshow, loads next page of images as well
 
 Known bugs and Issues:
