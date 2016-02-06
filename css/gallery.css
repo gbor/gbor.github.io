@@ -3,13 +3,13 @@ body {
     font-family: Georgia, Serif;
 }
 h1 {
-    max-width: 912px;
+    max-width: 936px;
     margin: auto;
     padding: 25px 0 25px 0;
     text-align: center;
 }
 #tiles {
-    max-width: 912px;
+    max-width: 936px;
     margin: auto;
     width: 100%;
     text-align: justify;
@@ -22,8 +22,11 @@ h1 {
     position: relative;
     overflow: hidden;
     text-align: -webkit-match-parent;
-    margin: 1px;
-
+    padding: 3px;
+    -webkit-transition: opacity 1.5s;
+    -moz-transition: opacity 1.5s;
+    -o-transition: opacity 1.5s;
+    transition: opacity 1.5s;
 }
 #tiles img:hover {
     cursor: pointer;
