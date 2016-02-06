@@ -62,9 +62,6 @@ var Gallery = {
                         var self = this;
                         this._afterSizesRetrieved.call(this, sizes, page, idx, error);
                         totalLoaded++;
-
-
-
                         // as soon as first 100/this.perceivedLoadRatio% (33% example) of the perpage images are loaded
                         // turn off throbber. so that we can have the percieved load time while we still have time
                         // from the user to scroll.
@@ -95,7 +92,6 @@ var Gallery = {
         }
     },
 
-    // done
     _afterSizesRetrieved: function (data, page, photoIndx, error) {
         if (data && !error) {
             var pageIndx = page - 1;
@@ -382,14 +378,12 @@ var Gallery = {
                 true
             );
         }
-        // TODO: need to change page as well here
         this.currentSlide.node = prev;
         this.currentSlide.idx = this._getDataAtt(prev, 'indx');
         this.currentSlide.page = this._getDataAtt(prev, 'page');
         this.currentSlide.oneBeforeLast = this._isSlideBeforeLast();
         this.currentSlide.isSecondSlide = this._isSecondSlide();
         this._updateImageNote();
-        // TODO: make the button disapper when no more
     },
 
     // when lighbbox is clicked close it, remove the ul children, reset the currentSlide
